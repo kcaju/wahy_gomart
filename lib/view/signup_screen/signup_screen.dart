@@ -14,7 +14,7 @@ class SignupScreen extends StatelessWidget {
         child: Container(
           // height: 350,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 25),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
             child: Row(
               children: [
                 Expanded(
@@ -105,7 +105,7 @@ class SignupScreen extends StatelessWidget {
                       ),
                       //create account button
                       Container(
-                        height: 50,
+                        height: 40,
                         width: 240,
                         child: Center(
                           child: Text(

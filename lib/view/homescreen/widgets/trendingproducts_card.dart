@@ -9,8 +9,10 @@ class TrendingproductsCard extends StatelessWidget {
       required this.name,
       required this.oldRate,
       required this.newRate,
-      required this.count});
+      required this.count,
+      this.isProducts = false});
   final String url, title, name, oldRate, newRate, count;
+  final bool isProducts;
 
   @override
   Widget build(BuildContext context) {
@@ -128,20 +130,24 @@ class TrendingproductsCard extends StatelessWidget {
               color: Colors.white,
               borderRadius: BorderRadius.circular(10)),
         ),
-        Container(
-          padding: EdgeInsets.all(8),
-          child: Text(
-            "-12% OFF",
-            style: TextStyle(
-                color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold),
-          ),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(10),
-            ),
-            color: Colors.red,
-          ),
-        )
+        isProducts
+            ? SizedBox()
+            : Container(
+                padding: EdgeInsets.all(8),
+                child: Text(
+                  "-12% OFF",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 10,
+                      fontWeight: FontWeight.bold),
+                ),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(10),
+                  ),
+                  color: Colors.red,
+                ),
+              )
       ],
     );
   }

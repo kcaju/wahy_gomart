@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wahy_gomart/view/shopbycategory_screen/shopbycategory_screen.dart';
 
 class CategoryPopup extends StatelessWidget {
   const CategoryPopup({super.key});
@@ -86,15 +87,12 @@ class CategoryPopup extends StatelessWidget {
       onSelected: (value) {
         // Navigate to the corresponding category page
         final selectedCategory = categories[value];
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(
-        //     builder: (context) => CategoryPage(
-        //       name: selectedCategory["name"],
-        //       image: selectedCategory["image"],
-        //     ),
-        //   ),
-        // );
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ShopbycategoryScreen(),
+          ),
+        );
       },
       itemBuilder: (context) {
         return List.generate(
