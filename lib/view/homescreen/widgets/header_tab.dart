@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wahy_gomart/view/homescreen/widgets/allproducts_screen.dart';
 import 'package:wahy_gomart/view/homescreen/widgets/category_popup.dart';
 import 'package:wahy_gomart/view/homescreen/widgets/homepage.dart';
 import 'package:wahy_gomart/view/homescreen/widgets/quickenquiry_screen.dart';
@@ -180,6 +181,13 @@ class HeaderTab extends StatelessWidget {
                     ),
                     onSelected: (value) {
                       // Handle any selection if required
+                      if (value == 1) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => AllproductsScreen()),
+                        );
+                      }
                     },
                     itemBuilder: (context) => [
                       PopupMenuItem(
